@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """converts gff3 of collapsed transcripts (AKA with just transcript and exon features) into hints for Augustus"""
