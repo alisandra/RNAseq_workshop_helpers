@@ -75,7 +75,7 @@ def check_samtools(try_anyways):
             samtools, min_tested, max_tested
         ))
 
-    for line in version_str.decode().split('\n'):
+    for line in str(version_str).split('\n'):
         match = re.match('.*samtools *([.0-9]*).*', line)
         if match:
             try:
