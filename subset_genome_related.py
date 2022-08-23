@@ -75,7 +75,7 @@ def check_samtools(try_anyways):
             samtools, min_tested, max_tested
         ))
 
-    for line in version_str.split('\n'):
+    for line in version_str.decode().split('\n'):
         match = re.match('.*samtools *([.0-9]*).*', line)
         if match:
             try:
@@ -190,8 +190,11 @@ def shift_sam_line(line, start, stop):
     """adjust/shift one sam line from global coordinates to coordinates local to sub sequence"""
     # note, this does not handle pairs falling out of range correctly, hopefully samtools view does
     line = line.rstrip()
+    line = line.decode()
     if line.startswith('@'):
         return line
+    elif not line:
+        return line  # empty string
     else:
         sline = line.split('\t')
 
