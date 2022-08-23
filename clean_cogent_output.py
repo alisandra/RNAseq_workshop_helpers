@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """concatenates Cogent output with unassigned input to bring together Cogent's 'reconstructed transcriptome'"""
