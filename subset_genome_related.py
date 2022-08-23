@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """make fasta/bam/gff files for sub-sequence of seq, with the range start_from-continue_to"""
